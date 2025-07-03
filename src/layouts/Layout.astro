@@ -1,16 +1,17 @@
 ---
 import Header from "../components/Header.astro"
 import '@fontsource/ubuntu';
-
-interface Props{
-	title:string
+import Footer from "../components/Footer.astro";
+interface Props {
+	title: string
 }
 
-const {title}=Astro.props as Props;
+const { title } = Astro.props as Props;
+
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -18,27 +19,32 @@ const {title}=Astro.props as Props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
-		<div class="absolute inset-0 -z-10 h-full w-full items-center flex flex-col [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
-		</div>
+
+	<body class="min-h-screen w-full flex flex-col items-center font-['Ubuntu']">
+		<div class="fixed inset-0 -z-10 w-full h-full [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
 
 		<Header />
-			<slot />
+		<slot />
+		<Footer />
 	</body>
 </html>
 
 <style>
-	html, body {
-		margin:  0 auto;
+	body {
+		margin: 0;
 		padding: 0;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		min-height: 100vh;
-		font-family: 'ubuntu', sans-serif;
+		box-sizing: border-box;
+		scroll-behavior: smooth;
 	}
 
-	:root{
+	@media(prefers-reduced-motion: reduce){
+		html{
+			scroll-behavior: auto;
+		}
+		
+	}
+
+	:root {
 		color-scheme: light dark;
 	}
 </style>

@@ -1,0 +1,14 @@
+---
+import { MyCertifications } from '../utils/Certifications';
+import type {Certification} from '../utils/Certifications'
+import CertificationItem from '../components/CertificationItem.astro';
+import CertificationIcon from '../components/icons/CertificationIcon.astro'
+---
+    <h2 class="text-2xl font-semibold flex gap-2 items-center py-5"> <CertificationIcon /> Mis Certidicaciones</h2>
+<ol class="relative border-s w-[720px] border-gray-200 dark:border-gray-700">
+    {MyCertifications.map(certification => (
+        <li class="mb-10 ms-4">
+        <CertificationItem certification={certification} />
+        </li>
+    ))}
+</ol>
