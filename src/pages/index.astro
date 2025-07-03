@@ -1,14 +1,33 @@
 ---
-import Welcome from '../components/Welcome.astro';
+
 import Layout from '../layouts/Layout.astro';
 import "../styles/global.css";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Badge from '../components/Badge.astro';
+import GitHub from '../components/icons/GitHub.astro';
+import Linkedin from '../components/icons/Linkedin.astro';
+import SocialLink from '../components/SocialLink.astro'; 
+import Mail from '../components/icons/Mail.astro';
 ---
 
-<Layout>
+<Layout title='Portafolio de Emmanuel Matrinez Estudiante de Ingeniería en Tecnologías de la Información y las Comunicaciones '>
 	<main>
+		<section class="w-full mx-auto lg:w-[740px] py-36">
+			
+			<div class="flex items-center gap-5">
+				<h1 class="text-white text-4xl font-bold flex flex-row gap-x-4 pb-2 text-center">¡Hola! Soy Emmanuel Martínez</h1>
+				<Badge>Disponible para trabajar</Badge>
+			</div>
+			<h2 class="text-2xl opacity-80 font-semibold">Estudiante de Ingeniería en Tecnologías de la Información y las Comunicaciones</h2>
+			<h2 class="text-2xl opacity-70">Aguascalientes, Ags., México 🇲🇽</h2>
+			<p class="text-wrap">Apasionado por la tecnología y siempre en busca de nuevas formas de resolver problemas de manera creativa. Me gusta aprender todos los días, experimentar con ideas y llevarlas a la práctica. Creo en el poder del conocimiento constante y en nunca dejar de mejorar.</p>
+
+			<nav class=" flex items-center gap-x-3  py-2 px-1 my-4">
+				<SocialLink href='https://github.com/Emmanuel-Mtz-777' target="_blank">Github <GitHub class="w-6 h-6"></GitHub> </SocialLink>
+				<SocialLink href='https://www.linkedin.com/in/humberto-emmanuel-rosales-martinez-588002316/' target="_blank">Linkedin <Linkedin class="w-6 h-6"></Linkedin> </SocialLink>
+				<SocialLink href='mailto:hemmanuelmtz777@gmail.com'>hemmanuelmtz777@gmail.com <Mail class="w-6 h-6"></Mail> </SocialLink>
+			</nav>
+		</section> 
 		
+
 	</main>
 </Layout>
