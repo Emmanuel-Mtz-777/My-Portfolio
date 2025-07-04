@@ -20,8 +20,8 @@ const { title } = Astro.props as Props;
 		<title>{title}</title>
 	</head>
 
-	<body class="min-h-screen w-full flex flex-col items-center font-['Ubuntu']">
-		<div class="fixed inset-0 -z-10 w-full h-full [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
+	<body class="relative text-black dark:text-white">
+	<div class="min-h-[100dvh] w-full fixed inset-0 -z-10 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
 
 		<Header />
 		<slot />
@@ -30,19 +30,28 @@ const { title } = Astro.props as Props;
 </html>
 
 <style>
-	body {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-		scroll-behavior: smooth;
-	}
+    body {
+        color: rgba(17, 17, 17, 0.9);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        overscroll-behavior: none;
+    }
 
-	@media(prefers-reduced-motion: reduce){
-		html{
-			scroll-behavior: auto;
-		}
-		
-	}
+	@media (prefers-reduced-motion: reduce) {
+        html {
+          	scroll-behavior: auto;
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        body {
+          	color: rgba(255, 255, 255, 0.9);
+        }
+    }
+
+
+
 
 	:root {
 		color-scheme: light dark;
