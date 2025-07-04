@@ -29,7 +29,7 @@ export const MyProjects:Project[] =[
         title:'C-Ita',
         description:'Proyecto frontend desarrollado en Kotlin, enfocado en crear una red social tipo Facebook para estudiantes del ITA. Permite la interacción entre usuarios mediante publicaciones, usando APIs y una base de datos SQLite local para simular funcionalidades básicas',
         github:'https://github.com/Emmanuel-Mtz-777/Cita',
-        image:'',
+        image:'/images/C-Ita.avif',
         tags:['Kotlin']
     },
 ]
