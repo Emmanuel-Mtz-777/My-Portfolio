@@ -1,5 +1,16 @@
 ---
 import CodeIcon from "./icons/codeIcon.astro"
+import type { Project } from "../utils/Proyects";
+import { MyProjects } from "../utils/Proyects";
+import ProjectItem from "../components/ProjectItem.astro";
 ---
 
 <h2 class="flex items-center text-2xl font-bold gap-2"> <CodeIcon /> Mis Proyectos </h2>
+
+<ul class="relative  w-[720px] border-gray-200 dark:border-gray-700">
+    {MyProjects.map(project => (
+        <li>
+        <ProjectItem project={project} />
+        </li>
+    ))}
+</ul>
