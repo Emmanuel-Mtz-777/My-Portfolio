@@ -5,11 +5,13 @@ import "../styles/global.css";
 import Badge from '../components/Badge.astro';
 import GitHub from '../components/icons/GitHub.astro';
 import Linkedin from '../components/icons/Linkedin.astro';
-import SocialLink from '../components/SocialLink.astro'; 
-import Mail from '../components/icons/Mail.astro';
+import SocialLink from '../components/SocialLink.astro';
+
 import Certifications from '../components/Certifications.astro';
 import Sectioncontainer from '../components/SectionContainer.astro';
 import Projects from '../components/Projects.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import AboutMe from '../components/AboutMe.astro';
 
 ---
 
@@ -17,17 +19,16 @@ import Projects from '../components/Projects.astro';
 	<main class="w-[720px]  mx-auto px-2 lg:w-[740px]">
 		<Sectioncontainer class="pt-36" id="inicio">
 			
-				<h1 class="text-white text-2xl lg:text-3xl font-bold flex flex-row gap-x-4 pb-2 text-center">¡Hola! Soy Emmanuel Martínez</h1>
+				<h1 class="text-white text-3xl lg:text-3xl font-bold flex flex-row gap-x-4 pb-2 text-center">¡Hola! Soy Emmanuel Martínez</h1>
 				<Badge>Disponible para trabajar</Badge>
 
-			<h2 class="text-2xl opacity-80 font-semibold mb-2">Estudiante de Ingeniería en Tecnologías de la Información y las Comunicaciones</h2>
+			<h2 class="text-2xl opacity-80 font-semibold  my-4">Estudiante de Ingeniería en Tecnologías de la Información y las Comunicaciones</h2>
 			<h2 class="text-xl opacity-70 mb-2">Aguascalientes, Ags., México 🇲🇽</h2>
-			<p class="text-wrap mb-2">Apasionado por la tecnología y siempre en busca de nuevas formas de resolver problemas de manera creativa. Me gusta aprender todos los días, experimentar con ideas y llevarlas a la práctica. Creo en el poder del conocimiento constante y en nunca dejar de mejorar.</p>
-
+			
 			<nav class=" flex items-center  gap-x-3  pt-2 px-1 my-4">
 				<SocialLink href='https://github.com/Emmanuel-Mtz-777' target="_blank">Github <GitHub class="size-6"></GitHub> </SocialLink>
 				<SocialLink href='https://www.linkedin.com/in/humberto-emmanuel-rosales-martinez-588002316/' target="_blank">Linkedin <Linkedin class="size-6"></Linkedin> </SocialLink>
-				<SocialLink href='mailto:hemmanuelmtz777@gmail.com'>hemmanuelmtz777@gmail.com <Mail class="size-6"></Mail> </SocialLink>
+				
 			</nav>
 		</Sectioncontainer>
 			
@@ -37,6 +38,10 @@ import Projects from '../components/Projects.astro';
 
 		<Sectioncontainer class="pt-12" id="proyectos">
 			<Projects />
+		</Sectioncontainer>
+
+		<Sectioncontainer class="pt-12" id="sobre-mi">
+			<AboutMe />
 		</Sectioncontainer>
 
 
