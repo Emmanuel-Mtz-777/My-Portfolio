@@ -20,7 +20,8 @@ const tagColors: Record<string, string> = {
 
     <div class="w-[720px]  mx-auto px-2 lg:w-[740px] py-4 flex">
         <div class="w-1/2">
-            <img src={image} alt=`Captura de pantalla de ${title}` class="w-[300px] h-[250px] rounded-3xl">
+            <img src={image} alt=`Captura de pantalla de ${title}` class="w-[300px] h-[250px] rounded-3xl flex transition duration-300
+            hover:scale-110 hover:border-2 hover:border-white">
         </div>
         <div class="w-1/2">
             <h3 class="text-lg font-bold text-white">{title}</h3>
@@ -32,7 +33,7 @@ const tagColors: Record<string, string> = {
             </li>
             ))}
         </ul>
-        <a href={github} target="_blank" rel="noopener noreferrer" class="mt-5 ml-4 text-sm font-semibold border px-5 py-2.5 rounded-xl  text-gray-300 text-pretty bg-gray-800 border-gray-500 hover:bg-gray-600 transition duration-300 ease-in-out">Ver GitHub</a>
+        <a href={github} target="_blank" rel="noopener noreferrer" class="inline-flex  mt-5 ml-4 text-sm font-semibold border px-5 py-2.5 rounded-xl  text-gray-300 text-pretty bg-gray-800 border-gray-500 transition duration-300 ease-in-out hover:bg-gray-600 hover:scale-110 ">Ver GitHub</a>
         </div>
         
         
