@@ -1,5 +1,17 @@
 ---
 import type { Project } from "../utils/Proyects";
+import AstroIcon from "./icons/AstroIcon.astro";
+import CssIcon from "./icons/CssIcon.astro";
+import HtmlIcon from "./icons/HtmlIcon.astro";
+import JavaScriptIcon from "./icons/JavaScriptIcon.astro";
+import JupyterIcon from "./icons/JupyterIcon.astro";
+import PythonIcon from "./icons/PythonIcon.astro";
+import TailwindIcon from "./icons/TailwindIcon.astro";
+import TypeScripIcon from "./icons/TypeScripIcon.astro";
+import DockerIcon from "./icons/DockerIcon.astro";
+import KotlinIcon from "./icons/KotlinIcon.astro"
+import ElasticIcon from "./icons/ElasticIcon.astro"
+
 const { project } = Astro.props as {project:Project};
 const {title,description,github,image,tags}=project;
 
@@ -17,24 +29,42 @@ const tagColors: Record<string, string> = {
     Docker: 'bg-cyan-800 text-white',
 };
 
+const tagIcon: Record<string, any>={
+    Python:PythonIcon,
+    'Jupyter Notebook': JupyterIcon,
+    Kotlin:KotlinIcon,
+    Html:HtmlIcon,
+    CSS:CssIcon,
+    JavaScript:JavaScriptIcon,
+    TypeScript:TypeScripIcon,
+    'Tailwind CSS':TailwindIcon,
+    Astro:AstroIcon,
+    ElasticSearch: ElasticIcon,
+    Docker:DockerIcon
+
+}
 ---
 
     <div class="w-[720px]  mx-auto px-2 lg:w-[740px] py-4 flex">
         <div class="w-1/2">
-            <img src={image} alt=`Captura de pantalla de ${title}` class="w-[300px] h-[250px] rounded-3xl flex transition duration-300
+            <img src={image} alt=`Captura de pantalla de ${title}` class="w-[300px] h-[250px] object-cover rounded-3xl flex transition duration-300
             hover:scale-110 hover:border-2 hover:border-white">
         </div>
         <div class="w-1/2">
             <h3 class="text-lg font-bold text-white">{title}</h3>
-        <p class="text-sm text-gray-100/90">{description}</p>
+        <p class="text-sm text-white">{description}</p>
         <ul class="mt-2 flex flex-wrap gap-2 mb-4">
-            {tags.map(tag => (
-            <li class={`px-3 py-1 inline-block rounded-3xl text-sm font-medium ${tagColors[tag] ?? ''}`}>
-                {tag}
-            </li>
-            ))}
-        </ul>
-        <a href={github} target="_blank" rel="noopener noreferrer" class="inline-flex  mt-5 ml-4 text-sm font-semibold border px-5 py-2.5 rounded-xl  text-gray-300 text-pretty bg-gray-800 border-gray-500 transition duration-300 ease-in-out hover:bg-gray-600 hover:scale-110 ">Ver GitHub</a>
+            {tags.map(tag => {
+                const Icon = tagIcon[tag];
+                return (
+                <li class={`flex items-center gap-1 px-3 py-1 rounded-3xl text-sm font-medium ${tagColors[tag] ?? ''}`}>
+                    {tag}
+                    {Icon && <Icon class="size-5" />}
+                </li>
+                );
+            })}
+            </ul>
+        <a href={github} target="_blank" rel="noopener noreferrer" class="inline-flex ml-4 text-sm font-semibold border px-5 py-2.5 rounded-xl  text-gray-300 text-pretty bg-gray-800 border-gray-500 transition duration-300 ease-in-out hover:bg-white hover:text-black hover:scale-110 ">Ver repositorio</a>
         </div>
         
         
