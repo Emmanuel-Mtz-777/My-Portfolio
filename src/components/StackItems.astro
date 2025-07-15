@@ -1,0 +1,39 @@
+---
+import AstroIcon from "./icons/stack/AstroIcon.astro";
+import CssIcon from "./icons/stack/CssIcon.astro";
+import HtmlIcon from "./icons/stack/HtmlIcon.astro";
+import JavaScriptIcon from "./icons/stack/JavaScriptIcon.astro";
+import PythonIcon from "./icons/stack/PythonIcon.astro";
+import TailwindIcon from "./icons/stack/TailwindIcon.astro";
+import TypeScripIcon from "./icons/stack/TypeScripIcon.astro";
+import DockerIcon from "./icons/stack/DockerIcon.astro";
+import VueIcon from "./icons/stack/VueIcon.astro";
+import ElasticIcon from "./icons/stack/ElasticIcon.astro"
+import NuxtIcon from "./icons/stack/NuxtIcon.astro"
+import LaravelIcon from "./icons/stack/LaravelIcon.astro"
+import GitIcon from "./icons/stack/GitIcon.astro"
+import GitHub from "./icons/contact/GitHub.astro";
+
+const stackIcons = [
+    GitIcon,
+    DockerIcon,
+    HtmlIcon,
+    CssIcon,
+    JavaScriptIcon,
+    TypeScripIcon,
+    TailwindIcon,
+    AstroIcon,
+    PythonIcon,
+    ElasticIcon,
+    VueIcon,
+    NuxtIcon,
+    LaravelIcon
+    
+];
+---
+
+<div class="flex flex-wrap items-center justify-around">
+    {stackIcons.map((Icon) => (
+        <Icon class="w-12 transition duration-300 hover:scale-120" />
+    ))}
+</div>

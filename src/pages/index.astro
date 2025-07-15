@@ -3,14 +3,14 @@ import SocialLink from '../components/SocialLink.astro';
 import Layout from '../layouts/Layout.astro';
 import "../styles/global.css";
 import Badge from '../components/Badge.astro';
-import GitHub from '../components/icons/GitHub.astro';
-import Linkedin from '../components/icons/Linkedin.astro';
+import GitHub from '../components/icons/contact/GitHub.astro';
+import Linkedin from '../components/icons/contact/Linkedin.astro';
 import Certifications from '../components/Certifications.astro';
 import Sectioncontainer from '../components/SectionContainer.astro';
 import Projects from '../components/Projects.astro';
-import SectionContainer from '../components/SectionContainer.astro';
+import Mail from '../components/icons/contact/Mail.astro';
 import AboutMe from '../components/AboutMe.astro';
-
+import Stack from '../components/Stack.astro';
 ---
 
 <Layout title='Portafolio de Emmanuel Matrinez Estudiante de Ingeniería en Tecnologías de la Información y las Comunicaciones '>
@@ -19,15 +19,16 @@ import AboutMe from '../components/AboutMe.astro';
 
 		<Sectioncontainer class="pt-36" id="inicio">
 				<img src="/images/AnotherStyle.avif" alt="Imagen IA de mi estilo anterior con cabello rubio" class="rounded-full size-12" />
-				<h1 class="text-white text-4xl font-bold flex flex-row gap-x-4 pb-2 text-center">¡Hola! Soy Emmanuel Martínez</h1>
+				<h2 class="text-white text-2xl font-bold flex flex-row gap-x-4 pb-2 text-center">¡Hola! Soy Emmanuel Martínez</h2>
 				
-			<h2 class="text-2xl font-bold text-white">Desarrollador Fullstack</h2>
-			<h3 class="text-xl opacity-80 font-semibold  my-4">Estudiante de Ingeniería en Tecnologías de la Información y las Comunicaciones</h3>
-			<h2 class="text-xl opacity-75 mb-2">Aguascalientes, Ags., México 🇲🇽</h2>
+			<h1 class="text-4xl font-bold text-white">Desarrollador Fullstack</h1>
+			<h3 class="text-xl opacity-90 font-semibold text-white my-4">Estudiante de Ingeniería en Tecnologías de la Información y las Comunicaciones</h3>
+			<h2 class="text-xl opacity-85 mb-2 text-white">Aguascalientes, Ags., México 🇲🇽</h2>
 			
 			<nav class=" flex items-center  gap-x-3  pt-2 px-1 my-4">
 				<SocialLink href='https://github.com/Emmanuel-Mtz-777' target="_blank">Github <GitHub class="size-6"></GitHub> </SocialLink>
 				<SocialLink href='https://www.linkedin.com/in/humberto-emmanuel-rosales-martinez-588002316/' target="_blank">Linkedin <Linkedin class="size-6"></Linkedin> </SocialLink>
+				<SocialLink href='mailto:hemmanuelmtz777@gmail.com' target="_blank">hemmanuelmtz777@gmail.com <Mail class="size-6"></Mail> </SocialLink>
 			</nav>
 			<Badge>Disponible para trabajar</Badge>
 		</Sectioncontainer>
@@ -35,6 +36,11 @@ import AboutMe from '../components/AboutMe.astro';
 		<Sectioncontainer class="pt-12" id="proyectos">
 			<Projects />
 		</Sectioncontainer>
+
+		<Sectioncontainer class="pt-12" id="stack">
+			<Stack />
+		</Sectioncontainer>
+
 
 		<Sectioncontainer class="pt-12" id="certificacion">
 			<Certifications />
