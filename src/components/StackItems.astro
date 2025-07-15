@@ -12,28 +12,50 @@ import ElasticIcon from "./icons/stack/ElasticIcon.astro"
 import NuxtIcon from "./icons/stack/NuxtIcon.astro"
 import LaravelIcon from "./icons/stack/LaravelIcon.astro"
 import GitIcon from "./icons/stack/GitIcon.astro"
-import GitHub from "./icons/contact/GitHub.astro";
 
 const stackIcons = [
-    GitIcon,
-    DockerIcon,
-    HtmlIcon,
-    CssIcon,
-    JavaScriptIcon,
-    TypeScripIcon,
-    TailwindIcon,
-    AstroIcon,
-    PythonIcon,
-    ElasticIcon,
-    VueIcon,
-    NuxtIcon,
-    LaravelIcon
-    
+	GitIcon,
+	DockerIcon,
+	HtmlIcon,
+	CssIcon,
+	JavaScriptIcon,
+	TypeScripIcon,
+	TailwindIcon,
+	AstroIcon,
+	PythonIcon,
+	ElasticIcon,
+	VueIcon,
+	NuxtIcon,
+	LaravelIcon
 ];
 ---
 
-<div class="flex flex-wrap items-center justify-around">
-    {stackIcons.map((Icon) => (
-        <Icon class="w-12 transition duration-300 hover:scale-120" />
-    ))}
+<style>
+	.scroll-wrapper {
+		overflow: hidden;
+		width: 100%;
+	}
+
+	.scroll-track {
+		display: flex;
+		width: max-content;
+		animation: scroll-left 30s linear infinite;
+	}
+
+	@keyframes scroll-left {
+		from {
+			transform: translateX(0%);
+		}
+		to {
+			transform: translateX(-50%);
+		}
+	}
+</style>
+
+<div class="scroll-wrapper">
+	<div class="scroll-track gap-8">
+		{stackIcons.concat(stackIcons).map((Icon, index) => (
+			<Icon class="w-12 h-12 transition duration-300 hover:scale-125" key={index} />
+		))}
+	</div>
 </div>
