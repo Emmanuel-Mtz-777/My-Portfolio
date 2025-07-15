@@ -1,16 +1,16 @@
 ---
 import type { Project } from "../utils/Proyects";
-import AstroIcon from "./icons/AstroIcon.astro";
-import CssIcon from "./icons/CssIcon.astro";
-import HtmlIcon from "./icons/HtmlIcon.astro";
-import JavaScriptIcon from "./icons/JavaScriptIcon.astro";
-import JupyterIcon from "./icons/JupyterIcon.astro";
-import PythonIcon from "./icons/PythonIcon.astro";
-import TailwindIcon from "./icons/TailwindIcon.astro";
-import TypeScripIcon from "./icons/TypeScripIcon.astro";
-import DockerIcon from "./icons/DockerIcon.astro";
-import KotlinIcon from "./icons/KotlinIcon.astro"
-import ElasticIcon from "./icons/ElasticIcon.astro"
+import AstroIcon from "./icons/stack/AstroIcon.astro";
+import CssIcon from "./icons/stack/CssIcon.astro";
+import HtmlIcon from "./icons/stack/HtmlIcon.astro";
+import JavaScriptIcon from "./icons/stack/JavaScriptIcon.astro";
+import JupyterIcon from "./icons/stack/JupyterIcon.astro";
+import PythonIcon from "./icons/stack/PythonIcon.astro";
+import TailwindIcon from "./icons/stack/TailwindIcon.astro";
+import TypeScripIcon from "./icons/stack/TypeScripIcon.astro";
+import DockerIcon from "./icons/stack/DockerIcon.astro";
+import KotlinIcon from "./icons/stack/KotlinIcon.astro"
+import ElasticIcon from "./icons/stack/ElasticIcon.astro"
 
 const { project } = Astro.props as {project:Project};
 const {title,description,github,image,tags}=project;
@@ -44,7 +44,6 @@ const tagIcon: Record<string, any>={
 
 }
 ---
-
     <div class="w-[720px]  mx-auto px-4 lg:w-[740px] py-4 flex justify-center mt-4 rounded-3xl">
         <div class="w-1/2 flex  items-center">
             <img src={image} alt=`Captura de pantalla de ${title}` class="w-[300px] h-[300px]  object-cover rounded-3xl flex transition duration-300

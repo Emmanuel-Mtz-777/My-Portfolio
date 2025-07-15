@@ -13,7 +13,7 @@ export const MyProjects:Project[] =[
     
     {
         title:'Spotify-Insights-with-Elasticsearch',
-        description:'Proyecto de análisis de Big Data que utiliza Elasticsearch para procesar y consultar un gran dataset de canciones de Spotify. El objetivo es realizar consultas sobre características clave de las canciones, como duración, energía y valencia, y presentar los resultados a través de visualizaciones interactivas en Jupyter Notebooks. Tanto Elasticsearch como Kibana se ejecutan dentro de un contenedor Docker para facilitar su despliegue y gestión.',
+        description: 'Análisis de Big Data con Elasticsearch sobre un dataset de canciones de Spotify. Permite consultar características como duración, energía y valencia, y visualizar los resultados en Jupyter Notebooks. Todo el entorno (Elasticsearch y Kibana) corre en contenedores Docker.',
         github:'https://github.com/Emmanuel-Mtz-777/Spotify-Insights-with-Elasticsearch',
         image:'/images/Spotify-Insights.avif',
         tags:['Python','Jupyter Notebook','ElasticSearch','Docker']
