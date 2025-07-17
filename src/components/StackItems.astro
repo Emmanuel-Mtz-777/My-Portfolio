@@ -39,6 +39,7 @@ const stackIcons = [
 	.scroll-track {
 		display: flex;
 		width: max-content;
+		align-items: center;
 		animation: scroll-left 30s linear infinite;
 	}
 
@@ -53,7 +54,7 @@ const stackIcons = [
 </style>
 
 <div class="scroll-wrapper">
-	<div class="scroll-track gap-8">
+	<div class="scroll-track gap-8 h-16">
 		{stackIcons.concat(stackIcons).map((Icon, index) => (
 			<Icon class="w-12 h-12 transition duration-300 hover:scale-125" key={index} />
 		))}
