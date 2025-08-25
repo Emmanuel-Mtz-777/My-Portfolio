@@ -7,10 +7,10 @@ import JavaScriptIcon from "./icons/stack/JavaScriptIcon.astro";
 import JupyterIcon from "./icons/stack/JupyterIcon.astro";
 import PythonIcon from "./icons/stack/PythonIcon.astro";
 import TailwindIcon from "./icons/stack/TailwindIcon.astro";
-import TypeScripIcon from "./icons/stack/TypeScripIcon.astro";
+import TypeScriptIcon from "./icons/stack/TypeScriptIcon.astro";
 import DockerIcon from "./icons/stack/DockerIcon.astro";
 import KotlinIcon from "./icons/stack/KotlinIcon.astro"
-import ElasticIcon from "./icons/stack/ElasticIcon.astro"
+import ElasticSearchIcon from "./icons/stack/ElasticSearchIcon.astro"
 
 const { project } = Astro.props as {project:Project};
 const {title,description,github,image,tags}=project;
@@ -36,10 +36,10 @@ const tagIcon: Record<string, any>={
     HTML:HtmlIcon,
     CSS:CssIcon,
     JavaScript:JavaScriptIcon,
-    TypeScript:TypeScripIcon,
+    TypeScript:TypeScriptIcon,
     'Tailwind CSS':TailwindIcon,
     Astro:AstroIcon,
-    ElasticSearch: ElasticIcon,
+    ElasticSearch: ElasticSearchIcon,
     Docker:DockerIcon
 
 }

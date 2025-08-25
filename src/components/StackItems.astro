@@ -5,10 +5,10 @@ import HtmlIcon from "./icons/stack/HtmlIcon.astro";
 import JavaScriptIcon from "./icons/stack/JavaScriptIcon.astro";
 import PythonIcon from "./icons/stack/PythonIcon.astro";
 import TailwindIcon from "./icons/stack/TailwindIcon.astro";
-import TypeScripIcon from "./icons/stack/TypeScripIcon.astro";
+import TypeScriptIcon from "./icons/stack/TypeScriptIcon.astro";
 import DockerIcon from "./icons/stack/DockerIcon.astro";
 import VueIcon from "./icons/stack/VueIcon.astro";
-import ElasticIcon from "./icons/stack/ElasticIcon.astro"
+import ElasticSearchIcon from "./icons/stack/ElasticSearchIcon.astro"
 import NuxtIcon from "./icons/stack/NuxtIcon.astro"
 import LaravelIcon from "./icons/stack/LaravelIcon.astro"
 import GitIcon from "./icons/stack/GitIcon.astro"
@@ -22,11 +22,11 @@ const stackIcons = [
 	HtmlIcon,
 	CssIcon,
 	JavaScriptIcon,
-	TypeScripIcon,
+	TypeScriptIcon,
 	TailwindIcon,
 	AstroIcon,
 	PythonIcon,
-	ElasticIcon,
+	ElasticSearchIcon,
 	VueIcon,
 	NuxtIcon,
 	LaravelIcon,
@@ -61,9 +61,12 @@ const stackIcons = [
 </style>
 
 <div class="scroll-wrapper">
-	<div class="scroll-track gap-8 h-16">
+	<div class="scroll-track mt-10 gap-8 h-16">
 		{stackIcons.concat(stackIcons).map((Icon, index) => (
-			<Icon class="w-12 h-12 transition duration-300 hover:scale-125" key={index} />
+			<div class="flex flex-col items-center gap-1" key={index}>
+				<Icon class="w-12 h-12 transition duration-300 hover:scale-125" />
+				<span class="text-gray-300">{Icon.name.replace("Icon", "")}</span>
+			</div>
 		))}
 	</div>
 </div>
