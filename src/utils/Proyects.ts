@@ -36,4 +36,12 @@ export const MyProjects:Project[] =[
         tags:['Kotlin'],
         
     },
+    {
+        title:'Meet2go',
+        description: 'Aplicación móvil multiplataforma desarrollada con React Native y Supabase para conectar personas con intereses similares y organizar eventos grupales. Incluye perfiles de usuario, gestión de eventos y un sistema de chat en tiempo real basado en un microservicio con Express desplegado en Heroku.',
+        github:'https://github.com/Emmanuel-Mtz-777/meet2Go.git',
+        image:'/images/Meet2Go.avif',
+        tags:['React','React Native', 'Supabase', 'Express'],
+        
+    },
 ]

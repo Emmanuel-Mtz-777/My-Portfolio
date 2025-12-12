@@ -11,6 +11,10 @@ import TypeScriptIcon from "./icons/stack/TypeScriptIcon.astro";
 import DockerIcon from "./icons/stack/DockerIcon.astro";
 import KotlinIcon from "./icons/stack/KotlinIcon.astro"
 import ElasticSearchIcon from "./icons/stack/ElasticSearchIcon.astro"
+import ReactIcon from "./icons/stack/ReactIcon.astro";
+import ReactNativeIcon from "./icons/stack/ReactNativeIcon.astro";
+import ExpressIcon from "./icons/stack/ExpressIcon.astro";
+import SupabaseIcon from "./icons/stack/SupabaseIcon.astro";
 
 const { project } = Astro.props as {project:Project};
 const {title,description,github,image,tags}=project;
@@ -27,7 +31,13 @@ const tagColors: Record<string, string> = {
     Astro: 'bg-pink-200 text-pink-800',
     ElasticSearch: 'bg-amber-300 text-amber-900',
     Docker: 'bg-cyan-800 text-white',
+
+    React: 'bg-cyan-900 text-cyan-300',
+    'React Native': 'bg-indigo-800 text-indigo-300',
+    Express: 'bg-gray-700 text-white',
+    Supabase: 'bg-emerald-700 text-emerald-300',
 };
+
 
 const tagIcon: Record<string, any>={
     Python:PythonIcon,
@@ -40,8 +50,11 @@ const tagIcon: Record<string, any>={
     'Tailwind CSS':TailwindIcon,
     Astro:AstroIcon,
     ElasticSearch: ElasticSearchIcon,
-    Docker:DockerIcon
-
+    Docker:DockerIcon,
+    React:ReactIcon,
+    'React Native':ReactNativeIcon,
+    Express:ExpressIcon,
+    Supabase:SupabaseIcon,
 }
 ---
     <div class="w-[720px]  mx-auto px-4 lg:w-[740px] py-4 flex justify-center mt-4 rounded-3xl">
